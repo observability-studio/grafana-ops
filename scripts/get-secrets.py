@@ -25,7 +25,7 @@ def script_handler(events, context):
     for secret in res['SecretList']:
         merge_dicts(secret_data, get_secret(secret['Name']), no_copy=True)
 
-    return {'secret': secret_data}
+    return {'secret': json.dumps(secret_data)}
 
 
 def get_secret(secret_name: str) -> dict:
