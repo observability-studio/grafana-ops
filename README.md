@@ -4,6 +4,10 @@
 
 Check out this post [A GitOps Way To Manage Grafana Data Sources At Scale](https://dev.to/aws-builders/a-gitops-way-to-manage-grafana-data-sources-at-scale-59la)
 
+## High-level architecture
+
+![architecture](docs/architecture.png)
+
 ## Directory structure
 
 ```bash
