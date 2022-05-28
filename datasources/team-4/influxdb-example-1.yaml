@@ -1,0 +1,9 @@
+name: InfluxDB Example 1
+type: influxdb
+access: direct
+url: https://influxdb.example.com
+user: "@team-4/influxdb-example-1:username"
+password: "@team-4/influxdb-example-1:password"
+database: automation
+jsonData:
+  httpMode: POST

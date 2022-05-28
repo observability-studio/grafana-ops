@@ -1,0 +1,16 @@
+name: Elasticsearch Example 1
+type: elasticsearch
+access: proxy
+url: http://elasticsearch.example.com:9200
+user: "@team-3/elasticsearch-example-1:username"
+password: "@team-3/elasticsearch-example-1:password"
+# index
+database: logs-index
+basicAuth: true
+jsonData:
+  esVersion: 7.7.0
+  includeFrozen: false
+  logLevelField: ""
+  logMessageField: ""
+  maxConcurrentShardRequests: 5
+  timeField: "@timestamp"

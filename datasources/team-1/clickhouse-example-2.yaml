@@ -1,0 +1,7 @@
+name: Clickhouse Example 2
+type: grafana-clickhouse-datasource
+access: proxy
+url: http://clickhouse-2.example.com
+user: "@team-1/clickhouse-example-2:username"
+password: "@team-1/clickhouse-example-2:password"
+basicAuth: true

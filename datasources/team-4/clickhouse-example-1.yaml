@@ -1,0 +1,7 @@
+name: Clickhouse Example 1
+type: vertamedia-clickhouse-datasource
+access: proxy
+url: http://clickhouse.example.com
+user: "@team-4/clickhouse-example-1:username"
+password: "@team-4/clickhouse-example-1:password"
+basicAuth: true

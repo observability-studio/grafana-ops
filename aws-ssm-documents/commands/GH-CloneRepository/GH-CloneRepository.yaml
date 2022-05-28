@@ -1,0 +1,42 @@
+---
+schemaVersion: "2.2"
+description: |
+  # GH-CloneRepository
+
+  ## What does this document do?
+
+  Clone Github repository. If the repository is already cloned, repository will be pulled instead
+
+  ## Input Parameters
+
+  - **RepositoryUrl**: (Required) HTTP URL of the repository. Including OAuth token in the URL. E.g. https://username:personal-access-token@github.com/username/repo.git
+  - **Branch**: Branch that will be checked out. Default `master`
+  - **WorkingDirectory**: Working directory that the give repository will be cloned into. Default `/opt`
+
+parameters:
+  RepositoryUrl:
+    type: String
+    description: (Required) HTTP URL of the repository. Including OAuth token in the URL. E.g. https://oauth-key@github.com/username/repo.git
+  Branch:
+    type: String
+    description: Branch that will be checked out. Default master
+    default: master
+  WorkingDirectory:
+    type: String
+    description: Working directory that the give repository will be cloned into. Default /opt/
+    default: /opt
+mainSteps:
+- name: CloneRepo
+  action: aws:runShellScript
+  inputs:
+    timeoutSeconds: 30
+    runCommand:
+    - |-
+      repoName=`basename {{ RepositoryUrl }} .git`
+
+      if [ ! -d "{{ WorkingDirectory }}/$repoName" ]; then
+        git clone --branch {{ Branch }} {{ RepositoryUrl }} {{ WorkingDirectory }}/$repoName
+      else
+        echo "The repository is already existed!"
+        git -C {{ WorkingDirectory }}/$repoName pull
+      fi

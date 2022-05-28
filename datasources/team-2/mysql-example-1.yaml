@@ -1,0 +1,12 @@
+name: MySQL Example 1
+type: mysql
+access: proxy
+url: mysql-example.cluster-123abc.ap-southeast-1.rds.amazonaws.com
+user: "@team-2/mysql-example-1:username"
+password: "@team-2/mysql-example-1:password"
+database: monitoring
+jsonData:
+  connMaxLifetime: 30
+  maxOpenConns: 10
+  tlsAuth: "false"
+  tlsAuthWithCACert: "false"

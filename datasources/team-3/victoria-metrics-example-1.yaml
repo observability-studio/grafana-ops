@@ -1,0 +1,9 @@
+name: Victoria Metrics Example 1
+type: prometheus
+access: proxy
+url: http://vmauth:8427
+isDefault: true
+jsonData:
+  httpHeaderName1: Authorization
+secureJsonData:
+  httpHeaderValue1: Bearer @team-3/victoria-metrics-example-1:authorizationToken

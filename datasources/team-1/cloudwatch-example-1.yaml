@@ -1,0 +1,7 @@
+name: CloudWatch Example 1
+type: cloudwatch
+access: proxy
+jsonData:
+  authType: keys
+  defaultRegion: ap-northeast-1
+  timeField: "@timestamp"

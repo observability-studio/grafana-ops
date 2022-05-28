@@ -1,0 +1,9 @@
+name: Prometheus Example 1
+type: prometheus
+access: proxy
+url: http://10.20.30.40:9090
+user: "@team-2/prometheus-example-1:username"
+password: "@team-2/prometheus-example-1:password"
+basicAuth: "false"
+jsonData:
+  httpMethod: POST
